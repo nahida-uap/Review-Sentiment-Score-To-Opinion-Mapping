@@ -16,4 +16,4 @@ To execute the program you need to import the following libraries:
 
 To run the code type the following command:
 
-python SSA2SL.py
+  - python SSA2SL.py
