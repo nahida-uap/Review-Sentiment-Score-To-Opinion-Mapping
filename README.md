@@ -17,3 +17,7 @@ To execute the program you need to import the following libraries:
 To run the code type the following command:
 
   - python SSA2SL.py
+
+
+Application GUI:
+![SS2SL](https://raw.githubusercontent.com/nahida-uap/Review-Sentiment-Score-To-Opinion-Mapping/master/img/GUI.png)
