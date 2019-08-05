@@ -16,19 +16,19 @@ SSA2SL = {'polarity': [1, 0.75, 0.5, 0.25, -0.25, -0.5, -0.75, -1],
 
 df = DataFrame(SSA2SL,columns=['polarity','subjectivity','belief', 'disbelief', 'uncertainity'])
 
-
 X = df[['polarity','subjectivity']] # here we have 2 variables for multiple regression. If you just want to use one variable for simple linear regression, then use X = df['polarity'] for example.Alternatively, you may add additional variables within the brackets
-Y = df['belief']
-Z = df['disbelief']
+B = df['belief']
+D = df['disbelief']
  
-# with sklearn
+# with sklearn - belief
 regr = linear_model.LinearRegression()
-regr.fit(X, Y)
+regr.fit(X, B)
 print('Intercept_b: \n', regr.intercept_)
 print('Coefficients_b: \n', regr.coef_)
 
+# with sklearn - disbelief
 regr_d = linear_model.LinearRegression()
-regr_d.fit(X, Z)
+regr_d.fit(X, D)
 print('Intercept_d: \n', regr_d.intercept_)
 print('Coefficients_d: \n', regr_d.coef_)
 
@@ -113,7 +113,6 @@ scatter3.get_tk_widget().pack(side=tk.RIGHT, fill=tk.BOTH)
 ax3.legend() 
 ax3.set_xlabel('Polarity')
 ax3.set_title('Polarity Vs. Belief')
-
 
 #plot 2nd scatter 
 figure4 = plt.Figure(figsize=(5,4), dpi=100)
