@@ -7,6 +7,7 @@ import tkinter as tk
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
+#boundary condition
 SSA2SL = {'polarity': [1, 0.75, 0.5, 0.25, -0.25, -0.5, -0.75, -1],
                 'subjectivity': [1, 0.25, 0.5, 0.25, 0.25, 0.5, 0.25, 1],
                  'belief': [1, 0.75, 0.5, 0.25, 0, 0, 0, 0],
